@@ -1,7 +1,7 @@
 npm init -y
 npm install express
 
-see on https://xxxxx.netlify.app/.netlify/functions/server/a
+see on https://xxxxx.netlify.app/.netlify/functions/server/etc
 
 npm install cors
 npm install concurrently --save
