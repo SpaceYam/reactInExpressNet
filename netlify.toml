@@ -2,3 +2,15 @@
   command = "npm install & npm run build & npm test"
   functions = "functions"
   publish = "clients/reactcsr/build"
+
+# api redirect
+[[redirects]]
+    from = "/api/*"
+    to = ".netlify/functions/:splat"
+    status = 200
+    
+# SPA router support.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
