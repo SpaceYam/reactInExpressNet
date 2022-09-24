@@ -1,0 +1,4 @@
+npm init -y
+npm install express
+
+see on https://xxxxx.netlify.app/.netlify/functions/server/a
