@@ -4,17 +4,21 @@
   "description": "",
   "main": "functions/server.js",
   "scripts": {
-    "build": "netlify-lambda build servers",
-    "test": "node servers/server.js",
-    "start": "node localserver.js"
+    "build": "npm run build --prefix clients/reactcsr",
+    "test": "netlify-lambda build servers",
+    "start": "concurrently --kill-others \"npm run server\" \"npm run client\"",
+    "server": "node localserver.js",
+    "client": "npm start --prefix clients/reactcsr"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "concurrently": "^7.4.0",
+    "cors": "^2.8.5",
     "dotenv": "^16.0.2",
     "express": "^4.18.1",
-    "serverless-http": "^3.0.2",
-    "netlify-lambda": "^0.4.0"
+    "netlify-lambda": "^0.4.0",
+    "serverless-http": "^3.0.2"
   }
 }

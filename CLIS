@@ -2,3 +2,8 @@ npm init -y
 npm install express
 
 see on https://xxxxx.netlify.app/.netlify/functions/server/a
+
+npm install cors
+npm install concurrently --save
+
+npm install react-router-dom
