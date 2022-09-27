@@ -4,7 +4,7 @@
   "description": "",
   "main": "functions/server.js",
   "scripts": {
-    "prepare": "npm install --prefix clients/reactcsr", 
+    "postprepare": "npm install --prefix clients/reactcsr", 
     "build": "npm run build --prefix clients/reactcsr",
     "test": "netlify-lambda build servers",
     "start": "concurrently --kill-others \"npm run server\" \"npm run client\"",
